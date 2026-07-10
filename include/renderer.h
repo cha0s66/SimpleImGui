@@ -21,3 +21,6 @@ bool CreateRenderTarget(IDXGISwapChain* pSwapChain);
 
 // Release the current RTV so it can be recreated.
 void CleanupRenderTarget();
+
+// Hook the game's D3D11 swapchain creation so we can attach to the real Present callback.
+bool InstallD3D11CreateDeviceAndSwapChainHook();
